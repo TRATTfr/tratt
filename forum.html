@@ -24,34 +24,102 @@
             align-items: center; /* Center align content */
             height: 100vh;
             box-sizing: border-box;
+            background-color: #DFDFDF;
+            background: linear-gradient(to bottom, #F8F8F8, #DFDFDF);
+            background-repeat: no-repeat;
         }
 
-        /* Ensure the header (logo) is at the top and does not overlap */
+        html, body {
+            min-height: 100%;
+        }
+
+        /* Links style */
+        a { color: #5D5D9E; }
+        a:visited { color: #5D5D9E; }
+        a:active { color: #5C615E; }
+        a:hover { color: #B2B3B4; }
+        a.wspf2ae41b { color: #0000FF; text-decoration: underline; }
+        a.wspf2ae41b:visited { color: #800080; text-decoration: underline; }
+        a.wspf2ae41b:active { color: #8018CB; text-decoration: underline; }
+        a.wspf2ae41b:hover { color: #8080FF; text-decoration: underline; }
+        a.wsp521a477f { color: #A01FCB; text-decoration: underline; }
+        a.wsp521a477f:visited { color: #800080; text-decoration: underline; }
+        a.wsp521a477f:active { color: #8018CB; text-decoration: underline; }
+        a.wsp521a477f:hover { color: #E3B4F3; text-decoration: underline; }
+
+        /* Header (Logo) */
         #header-container {
             width: 100%;
             text-align: center;
             margin-top: 20px;
         }
 
-        /* Navigation menu container */
-        #menu_489b3d8 {
+        #container_19690fcc {
+            vertical-align: top;
+            position: relative;
+            display: inline-block;
             width: 100%;
-            text-align: center;
-            margin-bottom: 20px; /* Gap between menu and iframe */
+            min-height: 40px;
+            background-color: #FFFFFF;
+            background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);
         }
 
-        /* Iframe container to center it with margins */
+        #img_1001a78e {
+            vertical-align: bottom;
+            position: relative;
+            display: inline-block;
+            width: 54%;
+            background: none;
+            height: auto;
+        }
+
+        /* Navigation menu container */
+        #menu_489b3d8 {
+            box-sizing: border-box;
+            vertical-align: bottom;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 38px;
+            text-align: left;
+            background-color: #E5E5E5;
+            background: linear-gradient(to bottom, #FFFFFF, #E5E5E5);
+            border: 1px solid #A0A0A0;
+        }
+
+        #menu_489b3d8_menualignmentwrapper {
+            position: relative;
+            overflow: visible;
+            height: 100%;
+            width: 274px;
+            left: calc(50% - 137px);
+        }
+
+        #menu_489b3d8 a {
+            text-decoration: none;
+        }
+
+        /* Mobile menu adjustments */
+        @media only screen and (max-width: 550px) {
+            #menu_489b3d8 .mobileEntry { display: block; }
+            #menu_489b3d8 .normalEntry { display: none; }
+            #menu_489b3d8_menualignmentwrapper {
+                width: 36px;
+                left: calc(50% - 18px);
+            }
+        }
+
+        /* Iframe container */
         .iframe-container {
             width: 96%; /* 2% margin on each side */
             margin: 20px auto; /* Center the iframe container */
             padding-bottom: 20px; /* Add space at the bottom */
         }
 
-        /* Iframe itself */
         iframe {
-            width: 100%; /* Make iframe fill the container width */
-            height: 2000px; /* Set iframe height */
-            border: none; /* Remove iframe border */
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            border: none;
         }
     </style>
 </head>
@@ -131,9 +199,7 @@
 
 <!-- Iframe Container (Centered) -->
 <div class="iframe-container">
-    <iframe src="https://forum.tratt.fr/phpbb/viewforum.php?f=3&sid=2e42cb7cff2a32344b506e9c4c69cacf" 
-        style="width: 100%; height: 2000px; border: none;">
-    </iframe>
+    <iframe src="https://forum.tratt.fr/phpbb/viewforum.php?f=3&sid=2e42cb7cff2a32344b506e9c4c69cacf"></iframe>
 </div>
 
 </body>
