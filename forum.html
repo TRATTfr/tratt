@@ -14,104 +14,119 @@
     script-src 'self' 'unsafe-inline' https://147.93.90.220;">
 
 	<style>
-		/* Ensure that the iframe is centered */
-		.iframe-container {
-			width: 96%; /* 96% of screen width */
-			margin: 20px auto; /* Center horizontally and add top and bottom margin */
-			padding-bottom: 20px; /* Add space below the iframe */
+		/* Ensure body has full height */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
 		}
 
+		/* Container for the header and menu */
+		#header-container {
+			text-align: center;
+			margin-bottom: 20px; /* Space between menu and iframe */
+		}
+
+		/* Navigation menu styles */
+		#menu_489b3d8 {
+			text-align: center;
+			margin-bottom: 20px; /* Space between menu and iframe */
+		}
+
+		/* Iframe container styles */
+		.iframe-container {
+			width: 96%; /* 96% of screen width, leaving 2% margin on both sides */
+			margin: 0 auto; /* Center the iframe container */
+			padding-bottom: 20px; /* Add space at the bottom */
+		}
+
+		/* Iframe itself */
 		iframe {
-			width: 100%; /* Make iframe fill the container */
-			height: 2000px; /* Set the iframe height */
-			border: none; /* Remove iframe border */
+			width: 100%; /* Iframe takes up full width of the container */
+			height: 2000px; /* Fixed height for iframe */
+			border: none; /* Remove border */
 		}
 	</style>
 </head>
 <body>
-<div class="textstyle1">
+<div id="header-container">
 	<!-- Logo Header -->
 	<div id="container_19690fcc">
-		<div id="container_19690fcc_padding">
-			<div class="textstyle1">
-				<a href="index.html">
-					<img src="images/3dt.png" width="4000" height="884" id="img_1001a78e" alt="" title="" border="0" />
-				</a>
-			</div>
-			<div style="clear:both"></div>
-		</div>
+		<a href="index.html">
+			<img src="images/3dt.png" width="4000" height="884" id="img_1001a78e" alt="" title="" border="0" />
+		</a>
 	</div>
-
-	<!-- Navigation Menu -->
-	<div id="menu_489b3d8">
-		<div id="menu_489b3d8_menualignmentwrapper">
-			<div class="menuholder1">
-				<a href="javascript:void(0);">
-					<div id="menuentry_50443472" class="menustyle1 menu_489b3d8_mainMenuEntry mobileEntry">
-						<div class="menuentry_text1">
-							<span class="textstyle2">&#8801;</span>
-						</div>
-					</div>
-				</a>
-				<a href="work.html" style="text-decoration:none">
-					<div id="menuentry_3dbc5511" class="menustyle2 menu_489b3d8_mainMenuEntry normalEntry">
-						<div class="menuentry_text2">
-							<span class="textstyle3">WORK</span>
-						</div>
-					</div>
-				</a>
-				<a href="nous.html" style="text-decoration:none">
-					<div id="menuentry_52599920" class="menustyle3 menu_489b3d8_mainMenuEntry normalEntry">
-						<div class="menuentry_text2">
-							<span class="textstyle3">US</span>
-						</div>
-					</div>
-				</a>
-				<a href="contact.html" style="text-decoration:none">
-					<div id="menuentry_d65920a" class="menustyle4 menu_489b3d8_mainMenuEntry normalEntry">
-						<div class="menuentry_text2">
-							<span class="textstyle3">CONTACT</span>
-						</div>
-					</div>
-				</a>
-				<a href="javascript:void(0);">
-					<div id="menuentry_62709428" class="menustyle5 menu_489b3d8_mainMenuEntry normalEntry">
-						<div class="menuentry_text2">
-							<span class="textstyle4">FORUM</span>
-						</div>
-					</div>
-				</a>
-
-				<script type="text/javascript" src="images/wsp_menu.js"></script>
-				<script type="text/javascript">
-					var js_menu_489b3d8 = new wsp_menu('menu_489b3d8', 'menu_489b3d8', 10, null, true);
-					js_menu_489b3d8.createMenuForItem('menuentry_50443472', [
-						"  <span class=\"textstyle3\">WORK</span> ", 'work.html', '',
-						"  <span class=\"textstyle3\">US</span> ", 'nous.html', '',
-						"  <span class=\"textstyle3\">&#160;&#160;&#160;NOUS</span> ", 'nous.html', '',
-						"  <span class=\"textstyle3\">&#160;&#160;&#160;NOS SERVICES</span> ", 'services.html', '',
-						"  <span class=\"textstyle3\">CONTACT</span> ", 'contact.html', '',
-						"  <span class=\"textstyle3\">FORUM</span> ", 'javascript:void(0);', ''
-					]);
-					js_menu_489b3d8.createMenuForItem('menuentry_3dbc5511', []);
-					js_menu_489b3d8.createMenuForItem('menuentry_52599920', [
-						"  <span class=\"textstyle3\">NOUS</span> ", 'nous.html', '',
-						"  <span class=\"textstyle3\">NOS SERVICES</span> ", 'services.html', ''
-					]);
-					js_menu_489b3d8.createMenuForItem('menuentry_d65920a', []);
-					js_menu_489b3d8.createMenuForItem('menuentry_62709428', []);
-				</script>
-			</div>
-		</div>
-	</div>
-
-	<!-- I-frame Container -->
-	<div class="iframe-container">
-		<iframe src="https://forum.tratt.fr/phpbb/viewforum.php?f=3&sid=2e42cb7cff2a32344b506e9c4c69cacf" 
-			style="width: 100%; height: 2000px; border: none;">
-		</iframe>
-	</div>
-
 </div>
+
+<!-- Navigation Menu -->
+<div id="menu_489b3d8">
+	<div id="menu_489b3d8_menualignmentwrapper">
+		<div class="menuholder1">
+			<a href="javascript:void(0);">
+				<div id="menuentry_50443472" class="menustyle1 menu_489b3d8_mainMenuEntry mobileEntry">
+					<div class="menuentry_text1">
+						<span class="textstyle2">&#8801;</span>
+					</div>
+				</div>
+			</a>
+			<a href="work.html" style="text-decoration:none">
+				<div id="menuentry_3dbc5511" class="menustyle2 menu_489b3d8_mainMenuEntry normalEntry">
+					<div class="menuentry_text2">
+						<span class="textstyle3">WORK</span>
+					</div>
+				</div>
+			</a>
+			<a href="nous.html" style="text-decoration:none">
+				<div id="menuentry_52599920" class="menustyle3 menu_489b3d8_mainMenuEntry normalEntry">
+					<div class="menuentry_text2">
+						<span class="textstyle3">US</span>
+					</div>
+				</div>
+			</a>
+			<a href="contact.html" style="text-decoration:none">
+				<div id="menuentry_d65920a" class="menustyle4 menu_489b3d8_mainMenuEntry normalEntry">
+					<div class="menuentry_text2">
+						<span class="textstyle3">CONTACT</span>
+					</div>
+				</div>
+			</a>
+			<a href="javascript:void(0);">
+				<div id="menuentry_62709428" class="menustyle5 menu_489b3d8_mainMenuEntry normalEntry">
+					<div class="menuentry_text2">
+						<span class="textstyle4">FORUM</span>
+					</div>
+				</div>
+			</a>
+
+			<script type="text/javascript" src="images/wsp_menu.js"></script>
+			<script type="text/javascript">
+				var js_menu_489b3d8 = new wsp_menu('menu_489b3d8', 'menu_489b3d8', 10, null, true);
+				js_menu_489b3d8.createMenuForItem('menuentry_50443472', [
+					"  <span class=\"textstyle3\">WORK</span> ", 'work.html', '',
+					"  <span class=\"textstyle3\">US</span> ", 'nous.html', '',
+					"  <span class=\"textstyle3\">&#160;&#160;&#160;NOUS</span> ", 'nous.html', '',
+					"  <span class=\"textstyle3\">&#160;&#160;&#160;NOS SERVICES</span> ", 'services.html', '',
+					"  <span class=\"textstyle3\">CONTACT</span> ", 'contact.html', '',
+					"  <span class=\"textstyle3\">FORUM</span> ", 'javascript:void(0);', ''
+				]);
+				js_menu_489b3d8.createMenuForItem('menuentry_3dbc5511', []);
+				js_menu_489b3d8.createMenuForItem('menuentry_52599920', [
+					"  <span class=\"textstyle3\">NOUS</span> ", 'nous.html', '',
+					"  <span class=\"textstyle3\">NOS SERVICES</span> ", 'services.html', ''
+				]);
+				js_menu_489b3d8.createMenuForItem('menuentry_d65920a', []);
+				js_menu_489b3d8.createMenuForItem('menuentry_62709428', []);
+			</script>
+		</div>
+	</div>
+</div>
+
+<!-- I-frame Container -->
+<div class="iframe-container">
+	<iframe src="https://forum.tratt.fr/phpbb/viewforum.php?f=3&sid=2e42cb7cff2a32344b506e9c4c69cacf" 
+		style="width: 100%; height: 2000px; border: none;">
+	</iframe>
+</div>
+
 </body>
 </html>
