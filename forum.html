@@ -13,6 +13,20 @@
     style-src 'self' 'unsafe-inline';
     script-src 'self' 'unsafe-inline' https://147.93.90.220;">
 
+	<style>
+		/* Ensure that the iframe is centered */
+		.iframe-container {
+			width: 96%; /* 96% of screen width */
+			margin: 20px auto; /* Center horizontally and add top and bottom margin */
+			padding-bottom: 20px; /* Add space below the iframe */
+		}
+
+		iframe {
+			width: 100%; /* Make iframe fill the container */
+			height: 2000px; /* Set the iframe height */
+			border: none; /* Remove iframe border */
+		}
+	</style>
 </head>
 <body>
 <div class="textstyle1">
@@ -70,17 +84,20 @@
 
 				<script type="text/javascript" src="images/wsp_menu.js"></script>
 				<script type="text/javascript">
-					var js_menu_489b3d8= new wsp_menu('menu_489b3d8', 'menu_489b3d8', 10, null, true);
-
-					js_menu_489b3d8.createMenuForItem('menuentry_50443472', ["  <span class=\"textstyle3\">WORK</span> ", 'work.html', '',
-					"  <span class=\"textstyle3\">US</span> ", 'nous.html', '',
-					"  <span class=\"textstyle3\">&#160;&#160;&#160;NOUS</span> ", 'nous.html', '',
-					"  <span class=\"textstyle3\">&#160;&#160;&#160;NOS SERVICES</span> ", 'services.html', '',
-					"  <span class=\"textstyle3\">CONTACT</span> ", 'contact.html', '',
-					"  <span class=\"textstyle3\">FORUM</span> ", 'javascript:void(0);', '']);
+					var js_menu_489b3d8 = new wsp_menu('menu_489b3d8', 'menu_489b3d8', 10, null, true);
+					js_menu_489b3d8.createMenuForItem('menuentry_50443472', [
+						"  <span class=\"textstyle3\">WORK</span> ", 'work.html', '',
+						"  <span class=\"textstyle3\">US</span> ", 'nous.html', '',
+						"  <span class=\"textstyle3\">&#160;&#160;&#160;NOUS</span> ", 'nous.html', '',
+						"  <span class=\"textstyle3\">&#160;&#160;&#160;NOS SERVICES</span> ", 'services.html', '',
+						"  <span class=\"textstyle3\">CONTACT</span> ", 'contact.html', '',
+						"  <span class=\"textstyle3\">FORUM</span> ", 'javascript:void(0);', ''
+					]);
 					js_menu_489b3d8.createMenuForItem('menuentry_3dbc5511', []);
-					js_menu_489b3d8.createMenuForItem('menuentry_52599920', ["  <span class=\"textstyle3\">NOUS</span> ", 'nous.html', '',
-					"  <span class=\"textstyle3\">NOS SERVICES</span> ", 'services.html', '']);
+					js_menu_489b3d8.createMenuForItem('menuentry_52599920', [
+						"  <span class=\"textstyle3\">NOUS</span> ", 'nous.html', '',
+						"  <span class=\"textstyle3\">NOS SERVICES</span> ", 'services.html', ''
+					]);
 					js_menu_489b3d8.createMenuForItem('menuentry_d65920a', []);
 					js_menu_489b3d8.createMenuForItem('menuentry_62709428', []);
 				</script>
@@ -88,12 +105,13 @@
 		</div>
 	</div>
 
-	<!-- I-frame below the navigation menu with margins and height -->
-	<div style="margin-top: 20px;">
+	<!-- I-frame Container -->
+	<div class="iframe-container">
 		<iframe src="https://forum.tratt.fr/phpbb/viewforum.php?f=3&sid=2e42cb7cff2a32344b506e9c4c69cacf" 
-			style="display:block; margin: 0 auto; width: 96%; height: 2000px; border: none;">
+			style="width: 100%; height: 2000px; border: none;">
 		</iframe>
 	</div>
+
 </div>
 </body>
 </html>
