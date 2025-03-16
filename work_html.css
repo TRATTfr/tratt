@@ -28,7 +28,7 @@ html, body { min-height: 100% }
 			#menu_38b56572 .normalEntry { display: none; } 
 			#menu_38b56572_menualignmentwrapper { width:36px; left: calc(50% - 18px);  } 
 		}
-body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8, #DFDFDF); background-repeat: no-repeat; padding:0;  margin: 0; }
+body { background-color:#E8E8E8; background: linear-gradient(to bottom, #F8F8F8, #DFDFDF); background-repeat: no-repeat; padding:0;  margin: 0; }
 .textstyle1 { text-align:center; }
 #container_71297186 { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:40px; background-color:#FFFFFF; background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);  }
 #container_71297186_padding { margin: 10px; display: block;  }
