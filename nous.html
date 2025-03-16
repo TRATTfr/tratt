@@ -63,6 +63,19 @@
 		js_menu_1a386bfe.createMenuForItem('menuentry_5be47000', []);
 
 	</script>
-</div></div></div><img src="images/banner3.png" width="4486" height="1785" id="img_6d1ec1f3" alt="" title="" /><span class="textstyle5"><br/><br/>Une usine qui travaille votre projet de sa conception au produit d&#233;finitif destin&#233; au grand public.<br/>Duo polyvalent int&#233;grant l'industriel &#224; l'ultra-organique, mixant le macro &#224; l'espace immense,<br/>l'absurde &#224; l&#8217;esth&#233;tique.<br/>Avec une attention particuli&#232;re pour les petits d&#233;tails mais une vision globale de notre image, <br/>le cercle TRATT englobe un ensemble de cr&#233;atifs partageant une passion pour l'art,<br/>une &#233;thique de travail m&#233;ticuleuse ainsi qu'une ma&#238;trise du niche,<br/>formant un atout de travail puissant.</span>  </div>
+<iframe id="peopleFrame" src="https://forum.tratt.fr/people.html" frameborder="0" scrolling="no" width="100%" onload="resizeIframe(this)"></iframe>
+
+<script>
+    function resizeIframe(iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
+
+    window.addEventListener("message", function(event) {
+        if (event.data.iframeHeight) {
+            document.getElementById("peopleFrame").style.height = event.data.iframeHeight + "px";
+        }
+    }, false);
+</script>
+
 </body>
 </html>
