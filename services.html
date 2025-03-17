@@ -1,116 +1,102 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html> 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="RocketCake">
-    <title>TRATT</title>
-    <link rel="stylesheet" type="text/css" href="services_html.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="RocketCake">
+	<title>TRATT</title>
+	<link rel="stylesheet" type="text/css" href="services_html.css?h=ba7f8fed">
 </head>
 <body>
 <div class="textstyle1">
-
-    <!-- 🔹 Dynamic Logo Header -->
-    <div id="container_91ac625">
-        <div id="container_91ac625_padding">
-            <div class="textstyle1">
-                <a href="index.html">
-                    <img id="header-logo" src="" alt="Logo">
-                </a>
-            </div>
-            <div style="clear:both"></div>
+<div id="container_564289d1">
+    <div id="container_564289d1_padding">
+        <div class="textstyle1">
+            <a href="index.html">
+                <img id="header-logo" src="" alt="Logo">
+            </a>
         </div>
-    </div>
-
-    <script>
-        async function fetchRandomImage() {
-            try {
-                // Fetch the random image URL from the backend
-                const response = await fetch("https://forum.tratt.fr/portfolio/logo/random");
-                const data = await response.json();
-
-                // Ensure the data contains a valid URL
-                if (data.random_logo_url) {
-                    console.log("Fetched image URL:", data.random_logo_url);
-                    document.getElementById("header-logo").src = data.random_logo_url;
-                } else {
-                    console.error("No image returned from server.");
-                }
-            } catch (error) {
-                console.error("Error loading random logo:", error);
-            }
-        }
-
-        // Load a random image when the page loads
-        fetchRandomImage();
-    </script>
-
-    <!-- 🔹 Main Navigation Menu -->
-    <div id="menu_65637dac">
-        <div id="menu_65637dac_menualignmentwrapper">
-            <div class="menuholder1">
-                <a href="javascript:void(0);">
-                    <div id="menuentry_ade6698" class="menustyle1 menu_65637dac_mainMenuEntry mobileEntry">
-                        <div class="menuentry_text1">
-                            <span class="textstyle2">&#8801;</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="work.html" style="text-decoration:none">
-                    <div id="menuentry_68635472" class="menustyle2 menu_65637dac_mainMenuEntry normalEntry">
-                        <div class="menuentry_text2">
-                            <span class="textstyle3">PROJETS</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="nous.html" style="text-decoration:none">
-                    <div id="menuentry_6385801d" class="menustyle3 menu_65637dac_mainMenuEntry normalEntry">
-                        <div class="menuentry_text2">
-                            <span class="textstyle3">NOUS</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="contact.html" style="text-decoration:none">
-                    <div id="menuentry_5a4d3624" class="menustyle4 menu_65637dac_mainMenuEntry normalEntry">
-                        <div class="menuentry_text2">
-                            <span class="textstyle4">CONTACT</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="forum.html" style="text-decoration:none">
-                    <div id="menuentry_2ee72f7e" class="menustyle5 menu_65637dac_mainMenuEntry normalEntry">
-                        <div class="menuentry_text2">
-                            <span class="textstyle3">FORUM</span>
-                        </div>
-                    </div>
-                </a>
-
-                <script type="text/javascript" src="images/wsp_menu.js"></script>
-                <script type="text/javascript">
-                    var js_menu_65637dac = new wsp_menu('menu_65637dac', 'menu_65637dac', 10, null, true);
-
-                    js_menu_65637dac.createMenuForItem('menuentry_ade6698', [
-                        "  <span class=\"textstyle3\">PROJETS</span> ", 'work.html', '',
-                        "  <span class=\"textstyle3\">NOUS</span> ", 'nous.html', '',
-                        "  <span class=\"textstyle3\">&#160;&#160;&#160;STUDIO</span> ", 'nous.html', '',
-                        "  <span class=\"textstyle3\">&#160;&#160;&#160;SERVICES</span> ", 'services.html', '',
-                        "  <span class=\"textstyle3\">CONTACT</span> ", 'contact.html', '',
-                        "  <span class=\"textstyle3\">FORUM</span> ", 'forum.html', ''
-                    ]);
-
-                    js_menu_65637dac.createMenuForItem('menuentry_68635472', []);
-                    js_menu_65637dac.createMenuForItem('menuentry_6385801d', [
-                        "  <span class=\"textstyle3\">STUDIO</span> ", 'nous.html', '',
-                        "  <span class=\"textstyle3\">SERVICES</span> ", 'services.html', ''
-                    ]);
-                    js_menu_65637dac.createMenuForItem('menuentry_5a4d3624', []);
-                    js_menu_65637dac.createMenuForItem('menuentry_2ee72f7e', []);
-
-                </script>
-            </div>
-        </div>
+        <div style="clear:both"></div>
     </div>
 </div>
 
+<script>
+    async function fetchRandomImage() {
+        try {
+            // Fetch a random image URL from the backend
+            const response = await fetch("https://forum.tratt.fr/portfolio/logo/random");
+            const data = await response.json();
+
+            // Ensure the data contains a valid URL
+            if (data.random_logo_url) {
+                console.log("Fetched image URL:", data.random_logo_url);
+                document.getElementById("header-logo").src = data.random_logo_url;
+            } else {
+                console.error("No image returned from server.");
+            }
+        } catch (error) {
+            console.error("Error loading random logo:", error);
+        }
+    }
+
+    // Load a random image when the page loads
+    fetchRandomImage();
+</script>
+<div id="menu_6fe91bc7_menualignmentwrapper" ><div  class="menuholder1"><a href="javascript:void(0);">
+	<div id="menuentry_9da77dd"  class="menustyle1 menu_6fe91bc7_mainMenuEntry mobileEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle2">&#8801;</span>
+		</div>
+	</div>
+</a>
+<a href="work.html" style="text-decoration:none">
+	<div id="menuentry_7883ba7c"  class="menustyle2 menu_6fe91bc7_mainMenuEntry normalEntry">
+		<div class="menuentry_text2">
+  <span class="textstyle3">WORK</span>
+		</div>
+	</div>
+</a>
+<a href="nous.html" style="text-decoration:none">
+	<div id="menuentry_27de8c33"  class="menustyle3 menu_6fe91bc7_mainMenuEntry normalEntry">
+		<div class="menuentry_text2">
+  <span class="textstyle4">US</span>
+		</div>
+	</div>
+</a>
+<a href="contact.html" style="text-decoration:none">
+	<div id="menuentry_5fcdca19"  class="menustyle4 menu_6fe91bc7_mainMenuEntry normalEntry">
+		<div class="menuentry_text2">
+  <span class="textstyle3">CONTACT</span>
+		</div>
+	</div>
+</a>
+<a href="http://forum.tratt.fr/phpbb/viewforum.php?f=3&sid=c3e2866f4f3c3de5e5cdc80370e8396c" style="text-decoration:none">
+	<div id="menuentry_524340ed"  class="menustyle5 menu_6fe91bc7_mainMenuEntry normalEntry">
+		<div class="menuentry_text2">
+  <span class="textstyle3">FORUM</span>
+		</div>
+	</div>
+</a>
+
+	<script type="text/javascript" src="images/wsp_menu.js"></script>
+	<script type="text/javascript">
+		var js_menu_6fe91bc7= new wsp_menu('menu_6fe91bc7', 'menu_6fe91bc7', 10, null, true);
+
+		js_menu_6fe91bc7.createMenuForItem('menuentry_9da77dd', ["  <span class=\"textstyle3\">WORK</span> ", 'work.html', '',
+		                                   "  <span class=\"textstyle3\">US</span> ", 'nous.html', '',
+		                                   "  <span class=\"textstyle3\">&#160;&#160;&#160;NOUS</span> ", 'nous.html', '',
+		                                   "  <span class=\"textstyle3\">&#160;&#160;&#160;NOS SERVICES</span> ", 'javascript:void(0);', '',
+		                                   "  <span class=\"textstyle3\">CONTACT</span> ", 'contact.html', '',
+		                                   "  <span class=\"textstyle3\">FORUM</span> ", 'http://forum.tratt.fr/phpbb/viewforum.php?f=3&sid=c3e2866f4f3c3de5e5cdc80370e8396c', '']);
+		js_menu_6fe91bc7.createMenuForItem('menuentry_7883ba7c', []);
+		js_menu_6fe91bc7.createMenuForItem('menuentry_27de8c33', ["  <span class=\"textstyle3\">NOUS</span> ", 'nous.html', '',
+		                                   "  <span class=\"textstyle4\">NOS SERVICES</span> ", 'javascript:void(0);', '']);
+		js_menu_6fe91bc7.createMenuForItem('menuentry_5fcdca19', []);
+		js_menu_6fe91bc7.createMenuForItem('menuentry_524340ed', []);
+
+	</script>
+</div></div></div>  </div>
+<div class="textstyle5">
+<span class="textstyle6">TRATT propose une panoplie de prestations dans l&#8217;industrie visuel et musical notamment (mais sans s'y limiter):<br/><br/>&#8226;Direction artistique de projets visuels complets<br/>&#8226;Cr&#233;ation d'identit&#233;/charte graphique<br/>&#8226;Captation d&#8217;&#233;v&#233;nements<br/>&#8226;R&#233;alisation de films publicitaires<br/>&#8226;R&#233;alisation de clips musicaux<br/>&#8226;R&#233;alisation de courts et longs m&#233;trages<br/>&#8226;Production d&#8217;interviews et de documentaires<br/>&#8226;Tournage de tout genre<br/>&#8226;Conception de pochettes pour sorties musicales<br/>&#8226;Cr&#233;ation d&#8217;affiches/posters<br/>&#8226;Design de v&#234;tements<br/>&#8226;Post-production avanc&#233;e<br/>&#8226;&#201;talonnage et correction colorim&#233;trique<br/>&#8226;Retouche et traitement d&#8217;image<br/>&#8226;Cr&#233;ation de contenus pour les r&#233;seaux sociaux<br/><br/>Pour nous contacter pour de tels services, ou pour tout autre demande, merci de remplir le formulaire dans la page de contact.</span>  </div>
 </body>
 </html>
