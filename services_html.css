@@ -30,7 +30,7 @@ html, body { min-height: 100% }
 		}
 body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8, #DFDFDF); background-repeat: no-repeat; padding:0;  margin: 0; }
 .textstyle1 { text-align:center; }
-/* 🔹 Make the random image behave exactly like the old 3DT.png */
+/* 🔹 Center the random image inside the header */
 .logo-wrapper {
     display: flex;
     justify-content: center;
@@ -38,10 +38,10 @@ body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8,
     width: 100%;
 }
 
-/* 🔹 Ensure the image is centered properly */
+/* 🔹 Ensure the image is centered and scales properly */
 #header-logo {
     display: block;
-    width: 54%; /* Matches the old image's displayed size */
+    width: 54%; /* Matches the old 3DT.png displayed size */
     height: auto;
     max-width: 100%;
     max-height: 100%;
