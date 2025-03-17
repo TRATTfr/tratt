@@ -1,118 +1,58 @@
+/* 🔹 Main Styling */
 a { color:#5D5D9E; } 
 a:visited { color:#5D5D9E; } 
 a:active { color:#5C615E; } 
 a:hover { color:#B2B3B4; } 
 html, body { min-height: 100% } 
-		a.wspf2ae41b{ color:#0000FF; text-decoration: underline} 
-		a.wspf2ae41b:visited{ color:#800080; text-decoration: underline} 
-		a.wspf2ae41b:active{ color:#8018CB; text-decoration: underline} 
-		a.wspf2ae41b:hover{ color:#8080FF; text-decoration: underline} 
-		a.wsp521a477f{ color:#A01FCB; text-decoration: underline} 
-		a.wsp521a477f:visited{ color:#800080; text-decoration: underline} 
-		a.wsp521a477f:active{ color:#8018CB; text-decoration: underline} 
-		a.wsp521a477f:hover{ color:#E3B4F3; text-decoration: underline} 
-#menu_6fe91bc7 a { text-decoration: none; }
-#menu_6fe91bc7_pane { background-color: #E6E6E6; border: 1px solid #E6E6E6; padding-top: 10px; padding-bottom: 10px; box-shadow: 2px 2px 6px 0px rgba(8, 8, 8, 0.784314); }
-#menu_6fe91bc7_hr { background-color: #E6E6E6; height: 1px; border: none; }
-#menu_6fe91bc7_entry { padding-left: 10px; padding-right: 10px; padding-top: 3px; padding-bottom: 3px; }
-#menu_6fe91bc7_entry:hover { background-color: #C4C4C4; color: #FFFFFF !important; }
-#menu_6fe91bc7_entry:hover span { color:#FFFFFF !important; }
-		.menu_6fe91bc7_mainMenuEntry { text-align: center; }
-		.menu_6fe91bc7_mainMenuEntry:hover {	background-color:#C4C4C4; }
-		.menu_6fe91bc7_mainMenuEntry:hover span {	color:#FFFFFF !important; }
-		#menu_6fe91bc7 .mobileEntry { display: none; } 
-		#menu_6fe91bc7 .normalEntry { display: block; } 
-		#menu_6fe91bc7_menualignmentwrapper{ width:318px; left: calc(50% - 159px);  } 
-		@media only screen and (max-width:550px) { 
-			#menu_6fe91bc7 .mobileEntry { display: block; } 
-			#menu_6fe91bc7 .normalEntry { display: none; } 
-			#menu_6fe91bc7_menualignmentwrapper { width:36px; left: calc(50% - 18px);  } 
-		}
-body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8, #DFDFDF); background-repeat: no-repeat; padding:0;  margin: 0; }
-.textstyle1 { text-align:center; }
 
-/* 🔹 Ensure the container is centered */
-.logo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+/* 🔹 Header & Logo Styling */
+#container_91ac625 { 
+    vertical-align: top; 
+    position:relative; 
+    display: inline-block; 
+    width:100%; 
+    min-height:95px; 
+    background-color:#FFFFFF; 
+    background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);  
 }
-
-/* 🔹 Ensure the image is centered and scales properly */
+#container_91ac625_padding { margin: 10px; display: block;  }
 #header-logo {
     display: block;
     margin: 0 auto;
-    width: 54%; /* Matches the previous 3DT.png size */
+    width: 54%;
     height: auto;
     max-width: 100%;
     max-height: 100%;
 }
 
-/* 🔹 Header Container Styling */
-#container_564289d1 {
-    vertical-align: top;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    min-height: 40px;
-    background-color: #FFFFFF;
-    background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);
+/* 🔹 Menu Styling */
+#menu_65637dac a { text-decoration: none; }
+#menu_65637dac { 
+    box-sizing: border-box; 
+    vertical-align: bottom; 
+    position:relative; 
+    display: inline-block; 
+    width:100%; 
+    height:38px; 
+    text-align:left; 
+    background-color:#E5E5E5; 
+    background: linear-gradient(to bottom, #FFFFFF, #E5E5E5); 
+    border: 1px solid #A0A0A0;  
 }
-
-#container_564289d1_padding {
-    margin: 10px;
-    display: block;
-}
-
-/* 🔹 Submenu Styling */
-.submenu-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-/* 🔹 Hide the submenu by default */
-.submenu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-}
-
-/* 🔹 Show submenu on hover */
-.submenu-wrapper:hover .submenu {
-    display: block;
-}
-
-/* 🔹 Style submenu items */
-.submenu-item {
-    padding: 10px 20px;
-    white-space: nowrap;
-    font-size: 14px;
-    color: black;
-}
-
-.submenu-item:hover {
-    background-color: #F0F0F0;
-}
-
-#img_48e28962 { vertical-align: bottom; position:relative; display: inline-block; width:54%; background:none; height:auto;  }
-#menu_6fe91bc7 { box-sizing: border-box; vertical-align: bottom; position:relative; display: inline-block; width:100%; height:38px; text-align:left; background-color:#E5E5E5; background: linear-gradient(to bottom, #FFFFFF, #E5E5E5); border: 1px solid #A0A0A0;  }
-#menu_6fe91bc7_menualignmentwrapper { position: relative; overflow: visible; height: 100%; }
+#menu_65637dac_menualignmentwrapper { position: relative; overflow: visible; height: 100%; }
 .menuholder1 { position: relative; overflow: hidden; width: 100%; height: 100%; }
-.menustyle1 { position:absolute; width:36px; height:38px; left:0px;  }
-.menuentry_text1 { position:absolute; top:0px; bottom:0px; left:0px; right:0px; margin-top:auto; margin-bottom:auto; margin-left:auto; margin-right:auto; height:32px;  }
-.textstyle2 { font-size:22pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap; }
-.menustyle2 { position:absolute; width:89px; height:38px; left:0px;  }
-.menuentry_text2 { position:absolute; top:0px; bottom:0px; left:0px; right:0px; margin-top:auto; margin-bottom:auto; margin-left:auto; margin-right:auto; height:17px;  }
-.textstyle3 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap; }
-.menustyle3 { position:absolute; width:63px; height:38px; left:89px;  }
-.textstyle4 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#8080FF;  white-space: nowrap; }
-.menustyle4 { position:absolute; width:91px; height:38px; left:152px;  }
-.menustyle5 { position:absolute; width:75px; height:38px; left:243px;  }
-.textstyle5 { text-align:left; }
-.textstyle6 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+
+/* 🔹 Mobile Menu */
+#menu_65637dac .mobileEntry { display: none; } 
+#menu_65637dac .normalEntry { display: block; } 
+@media only screen and (max-width:550px) { 
+    #menu_65637dac .mobileEntry { display: block; } 
+    #menu_65637dac .normalEntry { display: none; } 
+}
+
+/* 🔹 Submenu */
+.submenu-wrapper { position: relative; display: inline-block; }
+.submenu { display: none; position: absolute; left: 0; top: 100%; background-color: #FFFFFF; z-index: 10; }
+.submenu-wrapper:hover .submenu { display: block; }
+.submenu-item { padding: 10px 20px; font-size: 14px; color: black; }
+.submenu-item:hover { background-color: #F0F0F0; }
