@@ -43,8 +43,7 @@ body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8,
     display: block;
     margin: 0 auto; /* Centers horizontally */
     position: relative;
-    top: 50%;
-    transform: translateY(-50%); /* Centers vertically */
+    top: 50%; 
     width: 54%; /* Matches the previous 3DT.png size */
     height: auto;
     max-width: 100%;
