@@ -32,23 +32,22 @@ body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8,
 .textstyle1 { text-align:center; }
 #container_564289d1 { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:40px; background-color:#FFFFFF; background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);  }
 #container_564289d1_padding { margin: 10px; display: block;  }
-/* 🔹 Ensure iframe behaves exactly like the old 3DT.png */
-#header-logo {
-    vertical-align: bottom;
-    position: relative;
-    display: inline-block;
-    width: 54%; /* Matches the old image's displayed size */
-    background: none;
-    height: auto;
-    border: none;
+/* 🔹 Center the logo inside the header */
+.logo-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 100%;
 }
 
-/* 🔹 Center the iframe horizontally */
-.iframe-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+/* 🔹 Ensure the image scales properly */
+#header-logo {
+    display: block;
+    width: 54%; /* Matches the previous 3DT.png size */
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #img_48e28962 { vertical-align: bottom; position:relative; display: inline-block; width:54%; background:none; height:auto;  }
