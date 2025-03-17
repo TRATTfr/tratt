@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="RocketCake">
+    <title>TRATT</title>
+    <link rel="stylesheet" type="text/css" href="services_html.css">
+</head>
+<body>
+
+    <!-- 🔹 Iframe Header for Dynamic Logo (Loaded from VPS) -->
+    <div id="header-container">
+        <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
+    </div>
+
+    <!-- 🔹 Main Content Block (Will be extended by other pages) -->
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script>
+        // Resize the iframe dynamically based on its content
+        document.getElementById("header-logo").onload = function() {
+            this.style.height = this.contentWindow.document.body.scrollHeight + "px";
+        };
+    </script>
+
+    <style>
+        /* Ensure iframe header fits the page */
+        #header-container {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            background: transparent;
+        }
+
+        /* Responsive Iframe Header */
+        iframe#header-logo {
+            width: 100%;
+            height: 120px; /* Default height, dynamically resized */
+            border: none;
+            overflow: hidden;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            iframe#header-logo {
+                height: 80px; /* Smaller header for mobile */
+            }
+        }
+    </style>
+
+</body>
+</html>
