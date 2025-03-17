@@ -9,44 +9,89 @@
 </head>
 <body>
 
-    <!-- 🔹 Iframe Header for Dynamic Logo (Loaded from VPS) -->
-    <div id="header-container">
-        <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
+    <!-- 🔹 Dynamic Logo Header (Using an iframe) -->
+    <div class="textstyle1">
+        <div id="container_564289d1">
+            <div id="container_564289d1_padding">
+                <div class="textstyle1">
+                    <a href="index.html">
+                        <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
+                    </a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- 🔹 Main Content Block (Will be extended by other pages) -->
+    <!-- 🔹 Main Content Block (To be extended by other pages) -->
     <div id="content">
         {% block content %}{% endblock %}
     </div>
 
     <script>
-        // Resize the iframe dynamically based on its content
+        // Adjust iframe height dynamically based on its content
         document.getElementById("header-logo").onload = function() {
             this.style.height = this.contentWindow.document.body.scrollHeight + "px";
         };
     </script>
 
     <style>
-        /* Ensure iframe header fits the page */
-        #header-container {
-            width: 100%;
+        /* 🔹 Ensure iframe header replaces the old logo with correct styling */
+        iframe#header-logo {
+            width: 54%; /* Same as previous logo width */
             height: auto;
-            text-align: center;
+            border: none;
+            overflow: hidden;
             background: transparent;
         }
 
-        /* Responsive Iframe Header */
-        iframe#header-logo {
+        /* 🔹 Preserve Existing Header Styling */
+        #container_564289d1 {
+            vertical-align: top;
+            position: relative;
+            display: inline-block;
             width: 100%;
-            height: 120px; /* Default height, dynamically resized */
-            border: none;
-            overflow: hidden;
+            min-height: 40px;
+            background-color: #FFFFFF;
+            background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);
         }
 
-        /* Responsive Design */
+        #container_564289d1_padding {
+            margin: 10px;
+            display: block;
+        }
+
+        /* 🔹 Preserve Menu Styling */
+        #menu_6fe91bc7 {
+            box-sizing: border-box;
+            vertical-align: bottom;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 38px;
+            text-align: left;
+            background-color: #E5E5E5;
+            background: linear-gradient(to bottom, #FFFFFF, #E5E5E5);
+            border: 1px solid #A0A0A0;
+        }
+
+        #menu_6fe91bc7_menualignmentwrapper {
+            position: relative;
+            overflow: visible;
+            height: 100%;
+        }
+
+        .menuholder1 {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 🔹 Responsive Design */
         @media (max-width: 768px) {
             iframe#header-logo {
-                height: 80px; /* Smaller header for mobile */
+                width: 70%; /* Adjusts for smaller screens */
             }
         }
     </style>
