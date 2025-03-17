@@ -15,7 +15,9 @@
             <div id="container_564289d1_padding">
                 <div class="textstyle1">
                     <a href="index.html">
-                        <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
+                        <div id="iframe-wrapper">
+                            <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -113,20 +115,20 @@
         js_menu_6fe91bc7.createMenuForItem('menuentry_524340ed', []);
     </script>
 
-    <script>
-        // Ensure iframe resizes dynamically to match content
-        document.getElementById("header-logo").onload = function() {
-            this.style.height = this.contentWindow.document.body.scrollHeight + "px";
-        };
-    </script>
-
     <style>
-        /* 🔹 Apply Same Styles as `#img_48e28962` */
+        /* 🔹 Ensure iframe maintains aspect ratio */
+        #iframe-wrapper {
+            width: 54%;  /* Same width as the old static image */
+            position: relative;
+            overflow: hidden;
+        }
+
         iframe#header-logo {
-            width: 54%;  /* Keep same width as the original 3DT logo */
-            height: auto;
+            width: 100%;  /* Full width of container */
+            height: auto; /* Auto height to maintain aspect ratio */
             border: none;
             background: transparent;
+            display: block;
         }
 
         /* 🔹 Ensure Header Layout Stays the Same */
@@ -147,8 +149,8 @@
 
         /* 🔹 Responsive Design */
         @media (max-width: 768px) {
-            iframe#header-logo {
-                width: 70%;
+            #iframe-wrapper {
+                width: 70%; /* Make it slightly bigger on smaller screens */
             }
         }
     </style>
