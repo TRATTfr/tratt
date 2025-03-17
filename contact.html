@@ -8,8 +8,45 @@
 	<link rel="stylesheet" type="text/css" href="contact_html.css?h=07628702">
 </head>
 <body>
+
 <div class="textstyle1">
-<div id="container_91ac625"><div id="container_91ac625_padding" ><div class="textstyle1"><a href="index.html"><img src="images/3dt.png" width="4000" height="884" id="img_33dab022" alt="" title="" border="0" /></a></div>
+<div id="container_54755a93">
+    <div id="container_54755a93_padding">
+        <div class="textstyle1">
+            <a href="index.html">
+                <img id="header-logo" src="" alt="Logo">
+            </a>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+<script>
+    async function fetchRandomImage() {
+        try {
+            // Fetch a random image URL from the backend
+            const response = await fetch("https://forum.tratt.fr/portfolio/logo/random");
+            const data = await response.json();
+
+            // Ensure the data contains a valid URL
+            if (data.random_logo_url) {
+                console.log("Fetched image URL:", data.random_logo_url);
+                // Force HTTPS to prevent mixed content issues
+                const secureUrl = data.random_logo_url.replace("http://", "https://");
+                document.getElementById("header-logo").src = secureUrl;
+
+            } else {
+                console.error("No image returned from server.");
+            }
+        } catch (error) {
+            console.error("Error loading random logo:", error);
+        }
+    }
+
+    // Load a random image when the page loads
+    fetchRandomImage();
+</script>
+
 <div style="clear:both"></div></div></div><div id="menu_65637dac"><div  id="menu_65637dac_menualignmentwrapper" ><div  class="menuholder1"><a href="javascript:void(0);">
 	<div id="menuentry_ade6698"  class="menustyle1 menu_65637dac_mainMenuEntry mobileEntry">
 		<div class="menuentry_text1">
