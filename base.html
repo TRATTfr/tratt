@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="RocketCake">
-    <title>TRATT</title>
+    <title>{% block title %}TRATT{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="services_html.css">
 </head>
 <body>
 
-    <!-- 🔹 Dynamic Logo Header (Using an iframe) -->
+    <!-- 🔹 Header with Dynamic Logo -->
     <div class="textstyle1">
         <div id="container_564289d1">
             <div id="container_564289d1_padding">
@@ -18,34 +18,32 @@
                         <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
                     </a>
                 </div>
-                <div style="clear:both"></div>
             </div>
         </div>
     </div>
 
-    <!-- 🔹 Main Content Block (To be extended by other pages) -->
+    <!-- 🔹 Main Content -->
     <div id="content">
         {% block content %}{% endblock %}
     </div>
 
     <script>
-        // Adjust iframe height dynamically based on its content
+        // Ensure iframe resizes dynamically to match content
         document.getElementById("header-logo").onload = function() {
             this.style.height = this.contentWindow.document.body.scrollHeight + "px";
         };
     </script>
 
     <style>
-        /* 🔹 Ensure iframe header replaces the old logo with correct styling */
+        /* 🔹 Apply Same Styles as `#img_48e28962` */
         iframe#header-logo {
-            width: 54%; /* Same as previous logo width */
+            width: 54%;  /* Keep same width as the original 3DT logo */
             height: auto;
             border: none;
-            overflow: hidden;
             background: transparent;
         }
 
-        /* 🔹 Preserve Existing Header Styling */
+        /* 🔹 Ensure Header Layout Stays the Same */
         #container_564289d1 {
             vertical-align: top;
             position: relative;
@@ -61,37 +59,10 @@
             display: block;
         }
 
-        /* 🔹 Preserve Menu Styling */
-        #menu_6fe91bc7 {
-            box-sizing: border-box;
-            vertical-align: bottom;
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            height: 38px;
-            text-align: left;
-            background-color: #E5E5E5;
-            background: linear-gradient(to bottom, #FFFFFF, #E5E5E5);
-            border: 1px solid #A0A0A0;
-        }
-
-        #menu_6fe91bc7_menualignmentwrapper {
-            position: relative;
-            overflow: visible;
-            height: 100%;
-        }
-
-        .menuholder1 {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-        }
-
         /* 🔹 Responsive Design */
         @media (max-width: 768px) {
             iframe#header-logo {
-                width: 70%; /* Adjusts for smaller screens */
+                width: 70%;
             }
         }
     </style>
