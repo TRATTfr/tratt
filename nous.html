@@ -32,7 +32,10 @@
             // Ensure the data contains a valid URL
             if (data.random_logo_url) {
                 console.log("Fetched image URL:", data.random_logo_url);
-                document.getElementById("header-logo").src = data.random_logo_url;
+                // Force HTTPS to prevent mixed content issues
+                const secureUrl = data.random_logo_url.replace("http://", "https://");
+                document.getElementById("header-logo").src = secureUrl;
+
             } else {
                 console.error("No image returned from server.");
             }
