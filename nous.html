@@ -11,14 +11,39 @@
 
 <!-- 🔹 Header & Menu -->
 <div class="textstyle1">
-    <div id="container_54755a93">
-        <div id="container_54755a93_padding">
-            <div class="textstyle1">
-                <a href="index.html"><img src="images/3dt.png" width="4000" height="884" id="img_6e2710f5" alt="" title="" border="0" /></a>
-            </div>
-            <div style="clear:both"></div>
+<div id="container_54755a93">
+    <div id="container_54755a93_padding">
+        <div class="textstyle1">
+            <a href="index.html">
+                <img id="header-logo" src="" alt="Logo">
+            </a>
         </div>
+        <div style="clear:both"></div>
     </div>
+</div>
+
+<script>
+    async function fetchRandomImage() {
+        try {
+            // Fetch a random image URL from the backend
+            const response = await fetch("https://forum.tratt.fr/portfolio/logo/random");
+            const data = await response.json();
+
+            // Ensure the data contains a valid URL
+            if (data.random_logo_url) {
+                console.log("Fetched image URL:", data.random_logo_url);
+                document.getElementById("header-logo").src = data.random_logo_url;
+            } else {
+                console.error("No image returned from server.");
+            }
+        } catch (error) {
+            console.error("Error loading random logo:", error);
+        }
+    }
+
+    // Load a random image when the page loads
+    fetchRandomImage();
+</script>
 
     <div id="menu_1a386bfe">
         <div id="menu_1a386bfe_menualignmentwrapper">
