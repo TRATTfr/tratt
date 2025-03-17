@@ -10,16 +10,10 @@
 <body>
 
     <!-- 🔹 Dynamic Logo Header -->
-    <div class="textstyle1">
-        <div id="container_564289d1">
-            <div id="container_564289d1_padding">
-                <div id="iframe-wrapper">
-                    <a href="index.html">
-                        <div class="iframe-container">
-                            <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
-                        </div>
-                    </a>
-                </div>
+    <div id="container_564289d1">
+        <div id="container_564289d1_padding">
+            <div class="iframe-wrapper">
+                <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
             </div>
         </div>
     </div>
@@ -94,43 +88,30 @@
     </div>
 
     <script>
-        // Adjust iframe size based on content height
+        // Ensure iframe resizes dynamically to fit its content
         document.getElementById("header-logo").onload = function() {
             this.style.height = this.contentWindow.document.body.scrollHeight + "px";
+            this.style.width = this.contentWindow.document.body.scrollWidth + "px";
         };
     </script>
 
     <style>
-        /* 🔹 Ensure iframe maintains aspect ratio & is centered */
-        .iframe-container {
-            position: relative;
-            width: 50vw; /* Take 50% of screen width */
-            padding-top: 20vw; /* Maintain aspect ratio (adjust if necessary) */
+        /* 🔹 Make iframe take up exactly 4000x884 pixels */
+        .iframe-wrapper {
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         iframe#header-logo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            width: 4000px; /* Force exact size */
+            height: 884px;
             border: none;
-            background: transparent;
+            overflow: hidden;
         }
 
-        /* 🔹 Centering */
-        #iframe-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        /* 🔹 Ensure Header Layout Stays the Same */
+        /* 🔹 Header Container Styling */
         #container_564289d1 {
             vertical-align: top;
             position: relative;
@@ -146,14 +127,15 @@
             display: block;
         }
 
-        /* 🔹 Responsive Design */
+        /* 🔹 Responsive Adjustments */
         @media (max-width: 768px) {
-            .iframe-container {
-                width: 70vw; /* Make it slightly bigger on smaller screens */
-                padding-top: 30vw; /* Maintain aspect ratio */
+            iframe#header-logo {
+                width: 100%; /* Scale down properly */
+                height: auto;
             }
         }
     </style>
 
 </body>
 </html>
+
