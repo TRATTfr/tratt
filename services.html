@@ -14,8 +14,26 @@
         <div id="container_564289d1_padding">
             <div class="iframe-wrapper">
                 <a href="index.html">
-                    <iframe src="https://forum.tratt.fr/portfolio/logo" id="header-logo" scrolling="no"></iframe>
+                        <img id="header-logo" src="" alt="Logo">
                 </a>
+                
+                <script>
+                    async function fetchRandomImage() {
+                        try {
+                            // Fetch the list of available images from the backend
+                            const response = await fetch("https://forum.tratt.fr/portfolio/logo/random");
+                            const data = await response.json();
+                            
+                            // Set the image source to a randomly chosen image
+                            document.getElementById("header-logo").src = "https://forum.tratt.fr/static/logo/" + data.random_logo;
+                        } catch (error) {
+                            console.error("Error loading random logo:", error);
+                        }
+                    }
+                    
+                    // Load a random image when the page loads
+                    fetchRandomImage();
+                </script>
             </div>
         </div>
     </div>
