@@ -30,8 +30,26 @@ html, body { min-height: 100% }
 		}
 body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8, #DFDFDF); background-repeat: no-repeat; padding:0;  margin: 0; }
 .textstyle1 { text-align:center; }
-#container_91ac625 { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:95px; background-color:#FFFFFF; background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);  }
-#container_91ac625_padding { margin: 10px; display: block;  }
+#container_54755a93 { 
+    vertical-align: top; 
+    position:relative; 
+    display: inline-block; 
+    width:100%; 
+    min-height:40px; 
+    background-color:#FFFFFF; 
+    background: linear-gradient(to bottom, #7F7F7F, #FFFFFF);  
+}
+#container_54755a93_padding { margin: 10px; display: block; }
+
+/* 🔹 Ensure the random image is centered and scales correctly */
+#header-logo {
+    display: block;
+    margin: 0 auto;
+    width: 54%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
 #img_33dab022 { vertical-align: bottom; position:relative; display: inline-block; width:54%; background:none; height:auto;  }
 #menu_65637dac { box-sizing: border-box; vertical-align: bottom; position:relative; display: inline-block; width:100%; height:38px; text-align:left; background-color:#E5E5E5; background: linear-gradient(to bottom, #FFFFFF, #E5E5E5); border: 1px solid #A0A0A0;  }
 #menu_65637dac_menualignmentwrapper { position: relative; overflow: visible; height: 100%; }
