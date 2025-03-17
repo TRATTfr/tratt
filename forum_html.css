@@ -45,10 +45,11 @@ body { background-color:#DFDFDF; background: linear-gradient(to bottom, #F8F8F8,
 #header-logo {
     display: block;
     margin: 0 auto;
-    width: 54%; /* Ensure it matches previous 3DT.png scaling */
-    max-width: 100%; /* Prevents overflow */
-    height: auto; /* Keeps aspect ratio */
-    object-fit: contain; /* Ensures full visibility */
+    width: 54%; /* Ensure the same proportion as 3DT.png */
+    max-width: 100%; /* Prevents it from growing too large */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 884px; /* Ensure it doesn't exceed original image height */
+    object-fit: contain; /* Ensures it fits well */
 }
 
 #img_1001a78e { vertical-align: bottom; position:relative; display: inline-block; width:54%; background:none; height:auto;  }
